@@ -6,9 +6,10 @@ class ArticlesController < ApplicationController
 
 
   def show
-    @comments = @article.comments
-    @commentable = @article
+   
     @article = Article.find(params[:id])
+     @comments = @article.comments
+      @commentable = @article
   end
 
 
